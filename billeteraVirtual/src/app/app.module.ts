@@ -1,38 +1,39 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TemplateComponent } from './pages/template/template.component';
-import { ReactiveComponent } from './pages/reactive/reactive.component';
-import { RegistrarUsarioComponent } from './pages/registrar-usario/registrar-usario.component';
-import { LoginComponent } from './pages/login/login.component';
-import { PrincipalComponent } from './pages/principal/principal.component';
-import { TransferenciaComponent } from './pages/transferencia/transferencia.component';
-import { ConsultarOperecionesComponent } from './pages/consultar-opereciones/consultar-opereciones.component';
-import { ConsultarSaldoComponent } from './pages/consultar-saldo/consultar-saldo.component';
-import { PrestamoComponent } from './pages/prestamo/prestamo.component';
-import { RetirarDineroComponent } from './pages/retirar-dinero/retirar-dinero.component';
-import { IngresarDineroComponent } from './pages/ingresar-dinero/ingresar-dinero.component';
+import { LoginComponent } from './paginas/login/login.component';
+import { PaginaPrincipalComponent } from './paginas/pagina-principal/pagina-principal.component';
+import { ConsultarOperacionesComponent } from './paginas/consultar-operaciones/consultar-operaciones.component';
+import { ConsultarSaldoComponent } from './paginas/consultar-saldo/consultar-saldo.component';
+import { IngresarDineroComponent } from './paginas/ingresar-dinero/ingresar-dinero.component';
+import { PrestamoComponent } from './paginas/prestamo/prestamo.component';
+import { RegistrarUsuarioComponent } from './paginas/registrar-usuario/registrar-usuario.component';
+import { RetirarDineroComponent } from './paginas/retirar-dinero/retirar-dinero.component';
+import { TransferenciaComponent } from './paginas/transferencia/transferencia.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateComponent,
-    ReactiveComponent,
-    RegistrarUsarioComponent,
     LoginComponent,
-    PrincipalComponent,
-    TransferenciaComponent,
-    ConsultarOperecionesComponent,
+    PaginaPrincipalComponent,
+    ConsultarOperacionesComponent,
     ConsultarSaldoComponent,
+    IngresarDineroComponent,
     PrestamoComponent,
+    RegistrarUsuarioComponent,
     RetirarDineroComponent,
-    IngresarDineroComponent
+    TransferenciaComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
