@@ -8,7 +8,7 @@ import { FormControl } from '@angular/forms';
 })
 export class RegistrarUsuarioComponent implements OnInit {
 
-  mail =new FormControl('',[],[]);
+  mail =new FormControl('',[]);
   prueba = 'int';
   constructor() { }
 
