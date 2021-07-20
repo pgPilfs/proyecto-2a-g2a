@@ -15,77 +15,87 @@
 
 <!-- Cuerpo de la Página -->
 
-<body class="bg-light">
+<body class="">
   <div class="container-fluid">
     <div class="row">
 
       <!-- Columna Sidebar Izquierda c/ links -->
-      <div class="col-md-2 bg-dark text-light vh-100">
-        <div class="m-5">LOGO</div>
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a aria-current="page" href="#" class="nav-link text-white active">
-              <i class="bi bi-house-door"></i><span class="ms-2">Inicio</span>
+      <div class="col-md-2 vh-100">
+        <div class="my-5 ms-3">
+          <img class="logo" src="/assets/img/logoVW_40px.png">
+        </div>
+        <ul class="nav flex-column mb-5">
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/pagina-principal" class="nav-link active">
+              <i class="bi bi-house-door"></i><span class="ms-4">Inicio</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-white">
-              <i class="bi bi-person-circle"></i><span class="ms-2">Perfil</span>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/perfil" class="nav-link">
+              <i class="bi bi-person-circle"></i><span class="ms-4">Perfil</span>
             </a>
           </li>
-          <li>
-            <a href="#" class="nav-link text-white">
-              <i class="bi bi-cash-coin"></i><span class="ms-2">Ingresar Dinero</span>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/ingresar-dinero" class="nav-link">
+              <i class="bi bi-cash-coin"></i><span class="ms-4">Ingresar Dinero</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-white">
-              <i class="bi bi-cash"></i><span class="ms-2">Retirar Dinero</span>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/retirar-dinero" class="nav-link">
+              <i class="bi bi-cash"></i><span class="ms-4">Retirar Dinero</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-white">
-              <i class="bi bi-piggy-bank"></i><span class="ms-2">Saldo</span>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/consultar-saldo" class="nav-link">
+              <i class="bi bi-piggy-bank"></i><span class="ms-4">Saldo</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-white">
-              <i class="bi bi-arrow-repeat"></i><span class="ms-2">Transferir</span></a>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/transferencia" class="nav-link">
+              <i class="bi bi-arrow-repeat"></i><span class="ms-4">Transferir</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Ultimas Operaciones</a>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/consultar-operaciones" class="nav-link">
+              <i class="bi bi-journal-text"></i><span class="ms-4">Movimientos</span></a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Girar al Descubierto</a>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/girar-al-descubierto" class="nav-link disabled" tabindex="-1" aria-disabled="true">
+              <i class="bi bi-arrow-clockwise"></i><span class="ms-4">Girar al Descubierto</span></a>
           </li>
         </ul>
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Configuración</a>
+        <ul class="nav flex-column user-menu">
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/configuracion" class="nav-link small">
+              <i class="bi bi-gear"></i><span class="ms-4">Configuración</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Info</a>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/info " class="nav-link small">
+              <i class="bi bi-info-circle "></i><span class="ms-4">Info</span></a>
           </li>
         </ul>
       </div>
 
       <!-- Columna Principal - Main -->
-      <div class="col-md-8 col-sm-12">
+      <div class="col-md-8 col-sm-12 px-md-5">
 
         <!-- EDITABLE - Comenzar a editar acá -->
-        <div class="container">
+        <div class="container mt-5 mb-3">
           <div class="row">
             <!-- Nombre de la página en la que estás -->
-            <h1 class="h5 mt-5">Home</h1>
+            <h5 class="h5 mt-1">Inicio</h5>
           </div>
-        </div>
-        <div class="container">
           <div class="row">
             <!-- Nombre de usuario o titulo de sección -->
-            <h1 class="h1">Nombre de Usuario</h1>
+            <h1 class="h1">
+              <div class="">
+                <i class="bi bi-person-circle"></i>
+                <span class="ms-3">Usuario</span>  
+              </div>
+            </h1>
           </div>
         </div>
+        <!-- Columnas - Formularios -->
         <div class="container mb-3 ">
           <div class="row">
             <div class="col bg-white border rounded-1 me-3" style="min-height: 100px;">col</div>
@@ -112,7 +122,7 @@
 
       <!-- Columna Sidebar Derecha c/ cajas y datos -->
       <div class="col-md-2">
-        Sidebar derecha
+        <!-- esta columna está vacia por ahora -->
       </div>
     </div>
   </div>
