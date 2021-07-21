@@ -1,1 +1,159 @@
-<p>consultar-operaciones works!</p>
+<!doctype html>
+<html lang="es">
+
+<head>
+  <title>Consultar Saldo</title>
+</head>
+
+<!-- Cuerpo de la Página -->
+
+<body class="">
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- Columna Sidebar Izquierda c/ links -->
+      <div class="col-md-2 vh-100">
+        <div class="my-5 ms-3">
+          <img class="logo" src="/assets/img/logoVW_40px.png">
+        </div>
+        <ul class="nav flex-column mb-5">
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/pagina-principal" class="nav-link active">
+              <i class="bi bi-house-door"></i><span class="ms-4">Inicio</span>
+            </a>
+          </li>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/perfil" class="nav-link">
+              <i class="bi bi-person-circle"></i><span class="ms-4">Perfil</span>
+            </a>
+          </li>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/ingresar-dinero" class="nav-link">
+              <i class="bi bi-cash-coin"></i><span class="ms-4">Ingresar Dinero</span>
+            </a>
+          </li>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/retirar-dinero" class="nav-link">
+              <i class="bi bi-cash"></i><span class="ms-4">Retirar Dinero</span>
+            </a>
+          </li>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/consultar-saldo" class="nav-link">
+              <i class="bi bi-piggy-bank"></i><span class="ms-4">Saldo</span>
+            </a>
+          </li>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/transferencia" class="nav-link">
+              <i class="bi bi-arrow-repeat"></i><span class="ms-4">Transferir</span></a>
+          </li>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/consultar-operaciones" class="nav-link">
+              <i class="bi bi-journal-text"></i><span class="ms-4">Movimientos</span></a>
+          </li>
+
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/girar-al-descubierto" class="nav-link disabled" tabindex="-1" aria-disabled="true">
+              <i class="bi bi-arrow-clockwise"></i><span class="ms-4">Girar al Descubierto</span></a>
+          </li>
+        </ul>
+        <ul class="nav flex-column user-menu">
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/configuracion" class="nav-link small">
+              <i class="bi bi-gear"></i><span class="ms-4">Configuración</span></a>
+          </li>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/info " class="nav-link small">
+              <i class="bi bi-info-circle "></i><span class="ms-4">Info</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna Principal - Main -->
+      <div class="col-md-8 col-sm-12 px-md-5">
+
+        <!-- EDITABLE - Comenzar a editar acá -->
+        <div class="container mt-5 mb-3">
+          <div class="row">
+            <h5 class="h5 mt-1 text-black-50 ">Movimientos</h5>
+          </div>
+        </div>
+
+        <!-- Columnas - Formularios -->
+        <div class="mb-3 container">
+          <div class="row">
+            <!-- Nombre de usuario o titulo de sección -->
+            <h1 class="h1 mb-3">Ultimas Operaciones</h1>
+          </div>
+        </div>
+        <!-- Columnas - Formularios -->
+        <div class="mb-3 container">
+          <div class="row">
+            <div class="col-10">
+              <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Buscar</label>
+              </div>
+            </div>
+            <div class="p-1 col-2">
+              <button type="button" class="btn btn-primary btn-lg">Filtrar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3 container">
+          <div class="m-1 row">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Operación</th>
+                  <th scope="col">Número de operación</th>
+                  <th scope="col">Monto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10/01/2021</td>
+                  <td>Transferencia a otras cuentas</td>
+                  <td>42558664</td>
+                  <td>$10500</td>
+                </tr>
+                <tr>
+                  <td>11/01/2020</td>
+                  <td>Pago de servicios</td>
+                  <td>42224494</td>
+                  <td>$3500</td>
+                </tr>
+                <tr>
+                  <td>15/01/2021</td>
+                  <td>Recibiste</td>
+                  <td>42667664</td>
+                  <td>$900</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-end pe-4">
+              <button type="button" class="btn btn-outline-primary">Descargar</button>
+
+            </div>
+          </div>
+        </div>
+
+
+        <!--FIN DE LO EDITABLE - Comenzar a editar acá-->
+
+
+      </div>
+
+      <!-- Columna Sidebar Derecha c/ cajas y datos -->
+      <div class="col-md-2">
+        <!-- esta columna está vacia por ahora -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
