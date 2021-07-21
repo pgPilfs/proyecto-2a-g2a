@@ -12,7 +12,7 @@ import { perfilComponent } from './paginas/perfil/perfil.component';
 import { RegistrarUsuarioComponent } from './paginas/registrar-usuario/registrar-usuario.component';
 import { RetirarDineroComponent } from './paginas/retirar-dinero/retirar-dinero.component';
 import { TransferenciaComponent } from './paginas/transferencia/transferencia.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -33,6 +33,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+
 
   ],
   providers: [],
