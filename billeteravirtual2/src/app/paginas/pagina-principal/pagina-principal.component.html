@@ -58,11 +58,11 @@
         </ul>
         <ul class="nav flex-column user-menu">
           <li class="nav-item border border-0 rounded-2 ms-2">
-            <a routerLink="/configuracion" class="nav-link small">
+            <a routerLink="/perfil" class="nav-link small">
               <i class="bi bi-gear"></i><span class="ms-4">Configuración</span></a>
           </li>
           <li class="nav-item border border-0 rounded-2 ms-2">
-            <a routerLink="/info " class="nav-link small">
+            <a routerLink="/perfil" class="nav-link small">
               <i class="bi bi-info-circle "></i><span class="ms-4">Info</span></a>
           </li>
         </ul>
@@ -90,20 +90,42 @@
         <!-- Columnas - Formularios -->
         <div class="container mb-3 ">
           <div class="row">
-            <div class="col bg-white border rounded-1 me-3" style="min-height: 100px;">col</div>
-            <div class="col bg-white border rounded-1 me-3" style="min-height: 100px;">col</div>
-            <div class="col bg-white border rounded-1 me-3" style="min-height: 100px;">col</div>
-            <div class="col bg-white border rounded-1 me-0" style="min-height: 100px;">col</div>
+            <a routerLink="/consultar-operaciones" class="col text-center border rounded-3 p-3 me-3">
+                <span class="small">Ultimo Movimiento: </span><h3 class="h3 fw-bold">$10.500</h3>
+            </a>
+            <a routerLink="/consultar-saldo" class="col text-center border rounded-3 p-3 me-3">
+              <span class="small">Saldo Actual: </span><h3 class="h3 fw-bold">$50.000</h3>
+            </a>            
+            <a routerLink="/retirar-dinero" class="col text-center border rounded-3 p-3 me-3">
+              <span class="small">Otras Consultas</span><br>
+              <span class="small">Otras Operaciones</span><br>
+              <span class="small">Retirar Dinero</span>
+            </a>
+            <a routerLink="/ingresar-dinero" class="col text-center border rounded-3 p-3">
+              <button routerLink="/ingresar-dinero" type="link" class="btn btn-primary btn-lg">Ingresar Dinero</button>
+            </a>
           </div>
         </div>
         <div class="container">
           <div class="row">
-            <div class="col mb-3 bg-white border rounded-1" style="min-height: 140px;">col</div>
+            <div class="col mb-3 border rounded-1 me-2" style="min-height: 140px;">
+            <h3 class="h3 m-3">Cuentas Agendadas:</h3> 
+              <p class="ms-4">Cuenta Ejemplo 01</p>
+              <p class="ms-4">Cuenta Ejemplo 02</p>
+              <p class="ms-4">Cuenta Ejemplo 03</p>
+            </div>
+            <div class="col mb-3 border rounded-1" style="min-height: 140px;">
+              <h3 class="h3 m-3">Información importante</h3> 
+              <p class="ms-4">¿Cómo retirar dinero?</p>
+              <p class="ms-4">¿Cómo transferir a un amigo?</p>
+              </div>
           </div>
         </div>
         <div class="container">
           <div class="row">
-            <div class="col mb-3 bg-white border rounded-1" style="min-height: 140px;">col</div>
+            <div class="col mb-3 border rounded-1">
+              <p class="text-center m-0 p-2">Copyright © 2021 Virtual Wallet. Terminos y Condiciones.</p>
+            </div>
           </div>
         </div>
 

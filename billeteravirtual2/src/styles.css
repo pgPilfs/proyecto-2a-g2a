@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 body {
     font-family: 'Roboto', sans-serif!important;
     background-color: #F8F8FF!important;
@@ -11,7 +11,8 @@ body {
     font-size: 0.9em;
     color: #38394e;
 }
-li.nav-item:hover{
+li.nav-item:hover,
+a.col:hover{
     background-color: #e7f5f8a1;
 }
 .user-menu {

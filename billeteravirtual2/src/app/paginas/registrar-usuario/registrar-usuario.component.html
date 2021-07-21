@@ -4,7 +4,7 @@
     <title>Login · VirtualWallet</title>
 </head>
 
-<body>     
+<body>
     <!-- Cabecera con Logo -->
     <div class="container-fluid">
         <div class="row">
@@ -17,50 +17,60 @@
     <!-- Cuerpo del sitio / Formulario -->
     <div class="container">
         <div class="row">
-            <div class="col-4 mt-5 m-auto">
-                     <form>
-                        <h1 class="h1 mb-4">Registrar Usuario</h1>
-                        <p class="">Bienvenidos a<span class="fw-bold"> Virtual Wallet</span></p>
-                        <div class="my-3">
-                            <label>Ingresá tu nombre:</label>
-                            <input type="nombreUsuario" placeholder="nombre" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
-                        </div>
-                        <div class="my-3">
-                            <label>Ingresá tu apellido:</label>
-                            <input type="apellidoUsuario" placeholder="Apellido" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
-                        </div>
-                        <div class="my-3">
-                            <label for="exampleFormControlInput1" class="form-label">Ingresá tu email:</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
-                          </div>
-                        <div class="my-3">
-                            <p>Ingresá tu contraseña:</p>
-                            <label for="InputPassword" class="form-label visually-hidden">Contraseña</label>
-                            <input type="password" placeholder="Contraseña" class="form-control" id="InputPassword1">
-                            <br>
-                            <label for="InputPassword1" class="form-label visually-hidden">Contraseña1</label>
-                            <input type="password" placeholder="ingresar contraseña nuevamente" class="form-control" id="InputPassword1">
-                        </div>
-                  
-                        <div class="col-12 small mb-3">
-                                <input type="checkbox" class="form-check-input" id="Check1">
-                                <label class="form-check-label ms-2" for="Check1">Acepto los <a href="">Terminos y condiciones</a></label>
-                        </div>
-                        <button type="submit" class="col-12 py-2 btn btn-primary">Confirmar Registro</button>
-                    </form>
-                    <div class="small mt-5"><p>¿Ya tienes una cuenta?<a href="" class="fw-bold"> Inicia sesión</a>.</p></div>
-            </div>
-        </div>    
-    </div>
+            <div class="col-md-4 col-sm-10 mt-5 m-auto">
+                <form>
+                    <h1 class="h1 mb-4">Registrar Usuario</h1>
+                    <p class="">Bienvenidos a<span class="fw-bold"> Virtual Wallet</span></p>
+                    <div class="my-3">
+                        <label>Ingresá tu nombre:</label>
+                        <input type="nombreUsuario" placeholder="Nombre" class="form-control" id="InputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+                    <div class="my-3">
+                        <label>Ingresá tu apellido:</label>
+                        <input type="apellidoUsuario" placeholder="Apellido" class="form-control" id="InputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+                    <div class="my-3">
+                        <label for="exampleFormControlInput1" class="form-label">Ingresá tu email:</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="nombre@ejemplo.com">
+                    </div>
+                    <div class="my-3">
+                        <p>Ingresá tu contraseña:</p>
+                        <label for="InputPassword" class="form-label visually-hidden">Contraseña</label>
+                        <input type="password" placeholder="Contraseña" class="form-control" id="InputPassword1">
+                        <br>
+                        <label for="InputPassword1" class="form-label visually-hidden">Contraseña1</label>
+                        <input type="password" placeholder="Ingresar contraseña nuevamente" class="form-control"
+                            id="InputPassword1">
+                    </div>
 
-   <!-- Pie de pagina del sitio -->
-   <div class="container fixed-bottom">
-    <div class="row">
-        <div class="col-md-5 text-center text-muted small m-auto">
-        <p class="">Copyright © 2021 Virtual Wallet. Terminos y Condiciones.</p>
+                    <div class="col-12 small mb-3">
+                        <input type="checkbox" class="form-check-input" id="Check1">
+                        <label class="form-check-label ms-2" for="Check1">Acepto los <a href="">Terminos y
+                                condiciones</a></label>
+                    </div>
+                    <button type="submit" class="col-12 py-2 btn btn-primary">Confirmar Registro</button>
+                </form>
+                <div class="small mt-5">
+                    <p>¿Ya tienes una cuenta?
+                        <a routerLink="/pagina-principal" class="fw-bold"> Inicia sesión</a>.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+
+    <!-- Pie de pagina del sitio -->
+    <div class="container fixed-bottom">
+        <div class="row">
+            <div class="col-md-5 text-center text-muted small m-auto">
+                <p class="">Copyright © 2021 Virtual Wallet. Terminos y Condiciones.</p>
+            </div>
+        </div>
+    </div>
 
 </body>
+
 </html>

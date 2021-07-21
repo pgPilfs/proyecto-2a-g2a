@@ -8,7 +8,7 @@ import { PaginaPrincipalComponent } from './paginas/pagina-principal/pagina-prin
 import { ConsultarOperacionesComponent } from './paginas/consultar-operaciones/consultar-operaciones.component';
 import { ConsultarSaldoComponent } from './paginas/consultar-saldo/consultar-saldo.component';
 import { IngresarDineroComponent } from './paginas/ingresar-dinero/ingresar-dinero.component';
-import { PrestamoComponent } from './paginas/prestamo/prestamo.component';
+import { perfilComponent } from './paginas/perfil/perfil.component';
 import { RegistrarUsuarioComponent } from './paginas/registrar-usuario/registrar-usuario.component';
 import { RetirarDineroComponent } from './paginas/retirar-dinero/retirar-dinero.component';
 import { TransferenciaComponent } from './paginas/transferencia/transferencia.component';
@@ -23,7 +23,7 @@ import { FormsModule } from '@angular/forms';
     ConsultarOperacionesComponent,
     ConsultarSaldoComponent,
     IngresarDineroComponent,
-    PrestamoComponent,
+    perfilComponent,
     RegistrarUsuarioComponent,
     RetirarDineroComponent,
     TransferenciaComponent,
