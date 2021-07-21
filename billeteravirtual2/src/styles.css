@@ -4,6 +4,12 @@ body {
     font-family: 'Roboto', sans-serif!important;
     background-color: #F8F8FF!important;
 }
+a {
+    text-decoration: none;
+}
+.main a {
+    color: #242db0;
+}
 .logo{
     width: 100%;
 }
