@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get usuarioField(){
+  get usuarioField(){ 
     return this.form.get("usuario");
   }
   get contraField() {

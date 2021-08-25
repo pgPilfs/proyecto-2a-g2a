@@ -11,7 +11,7 @@ export class RegistrarUsuarioComponent implements OnInit {
 
   form: FormGroup;
 
-  condiciones = "-Minimo 8 caracteres\n -Maximo 15 \n -Al menos una mayuscula\n -Al menos una minuscula \n -Al menos un dijito \n -Al nemos un caracter especial \n -no espacios en blanco "
+  condiciones = "-Minimo 8 caracteres \n -Maximo 15 \n -Al menos una mayuscula\n -Al menos una minuscula \n -Al menos un dijito \n -Al nemos un caracter especial \n -no espacios en blanco "
 
   constructor(private formBuilder: FormBuilder) {
 

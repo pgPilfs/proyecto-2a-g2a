@@ -22,7 +22,7 @@
                         <h1 class="h1 fw-bold mb-3">Login</h1>
                         <p class="">Bienvenidos a<span class="fw-bold"> Virtual Wallet</span></p>
                         <div class="mb-3">
-                            <label for="nombreUsuario" class="form-label visually-hidden">Email</label>
+                            <label for="nombreUsuario" class="form-label visually-hidden">User</label>
                             <input type="text" formControlName="usuario" placeholder="Usuario" class="form-control" id="InputEmail1" aria-describedby="emailHelp" [class.border-danger]='usuarioInvalid' required>
                             <div *ngIf="usuarioField?.errors && usuarioField?.dirty" class="text-danger ">
                                 <p *ngIf="usuarioField?.hasError('required')">El es necesrio </p>
