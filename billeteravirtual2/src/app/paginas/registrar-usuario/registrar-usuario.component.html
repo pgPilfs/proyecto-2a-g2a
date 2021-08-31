@@ -1,7 +1,15 @@
 <html lang="es">
 
 <head>
+<<<<<<< Updated upstream
     <title>Login · VirtualWallet</title>
+=======
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="HoracioAlanís">
+    <title>registrar-usuario · VirtualWallet</title>
+>>>>>>> Stashed changes
 </head>
 
 <body>
@@ -14,9 +22,10 @@
         </div>
     </div>
 
-    <!-- Cuerpo del sitio / Formulario -->
+    <!-- Cuerpo del sitio/ Formulario -->
     <div class="container">
         <div class="row">
+<<<<<<< Updated upstream
             <div class="col-md-4 col-sm-10 mt-5 m-auto">
                 <form class="needs-validation" [formGroup]="form" (ngSubmit)="onEnviar($event)" autocomplete="off"
                     novalidate>
@@ -39,10 +48,30 @@
                         <label>Ingresá tu nombre:</label>
                         <input type="nombreUsuario" formControlName="nombre" placeholder="Nombre" class="form-control" id="InputEmail1"
                             aria-describedby="emailHelp" [class.border-danger]='nombreInvalid' required>
+=======
+            <div class="col-4 mt-5 m-auto">
+                <form class="needs-validation" [formGroup]="form" (ngSubmit)="onEnviar($event)" autocomplete="off" novalidate>
+                    <h1 class="h1 mb-4">Registrar Usuario</h1>
+                    <p class="">Bienvenidos a<span class="fw-bold"> Virtual Wallet</span></p>
+                    <div class="mb-3">
+                        <label for="nombre">Ingresar Nombre de Usuario:</label>
+                        <input type="text" formControlName="usuario" placeholder="nombre usuario" class="form-control" id="usuario" [class.border-danger]='usuarioInvalid' required>
+                        <div *ngIf="usuarioField?.errors && usuarioField?.dirty" class="text-danger">
+                            <p *ngIf="usuarioField?.hasError('required')">El usuario es requerido</p>
+                            <p *ngIf="usuarioField?.hasError('maxlength')">Superaste la cantidad maxima de caracteres</p>
+                            <p *ngIf="usuarioField?.hasError('minlength')">No ingresaste la cantidad minima de caracteres</p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+
+                        <label for="nombre">Ingresar Nombre:</label>
+                        <input type="text" formControlName="nombre" placeholder="nombre" class="form-control" id="nombre" [class.border-danger]='nombreInvalid' required>
+>>>>>>> Stashed changes
                         <div *ngIf="nombreField?.errors && nombreField?.dirty" class="text-danger">
                             <p *ngIf="nombreField?.hasError('required')">El nombre es requerido</p>
                             <p *ngIf="nombreField?.hasError('maxlength')">Superaste la cantidad maxima de caracteres</p>
                             <p *ngIf="nombreField?.hasError('minlength')">No ingresaste la cantidad minima de caracteres</p>
+<<<<<<< Updated upstream
                         </div>
                     </div>
                     <div class="my-3">
@@ -82,10 +111,49 @@
                                 <p *ngIf="contraRepetidaField?.hasError('required')">Repita la contraseña</p>
                                 <p *ngIF='contrasIguales()'>Las contras son iguales</p>
                             </div>
+=======
+                        </div>
+                        <label for="apellido" class="form-leble">Ingresar Apellido:</label>
+                        <input type="text" formControlName="apellido" placeholder="apellido" class="form-control" id="apellido" [class.border-danger]='apellidoInvalid' required>
+                        <div *ngIf="apellidoField?.errors && apellidoField?.dirty" class="text-danger">
+                            <p *ngIf="apellidoField?.hasError('required')">El apellido es requerido</p>
+                            <p *ngIf="apellidoField?.hasError('maxlength')">Superaste la cantidad maxima de caracteres</p>
+                            <p *ngIf="apellidoField?.hasError('minlength')">No ingresaste la cantidad minima de caracteres</p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mail" class="form-label">Ingresar mail:</label>
+                        <input type="email" class="form-control" formControlName="mail" id="mail" placeholder="nombre@ejemplo.com" required [class.border-danger]='mailInvalid'>
+                        <div *ngIf="mailField?.errors && mailField?.dirty" class="text-danger ">
+                            <p *ngIf="mailField?.hasError('required')">La contraseña es requerida es requerido</p>
+                            <p *ngIf="mailField?.hasError('email')">El Formato del mail no es correcto</p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <p>Ingresar contraseña:</p>
+                        <label for="contra" class="form-label visually-hidden">contraseña1</label>
+                        <input type="password" formControlName="contra" placeholder="contraseña" class="form-control"
+                            id="contra1" [class.border-danger]='contraInvalid'>
+                        <div *ngIf="contraField?.errors && contraField?.dirty" class="text-danger ">
+                            <p *ngIf="contraField?.hasError('required')">El mail es requerido</p>
+                            <p *ngIf="contraField?.hasError('pattern')">El Formato no cumple con las condiccines: {{condiciones}}</p>
+                            
+                        </div>
+                        <br>
+
+                        <label for="contra" class="form-label visually-hidden">contraseña2</label>
+                        <input type="password" formControlName="contraRepetida" placeholder="ingresar contraseña nuevamente" class="form-control"
+                            id="contra2" [class.border-danger]='contraRepetidaInvalid' required>
+                        <div *ngIf="contraRepetidaField?.errors && contraRepetidaField?.dirty" class="text-danger ">
+                            <p *ngIf="contraRepetidaField?.hasError('required')">Repita la contraseña</p>
+                            <p *ngIF='contrasIguales()'>Las contras son distinas</p>
+                        </div>
+>>>>>>> Stashed changes
                     </div>
 
                     <div class="col-12 small mb-3">
                         <input type="checkbox" class="form-check-input" id="Check1">
+<<<<<<< Updated upstream
                         <label class="form-check-label ms-2" for="Check1">Acepto los <a href="">Terminos y
                                 condiciones</a></label>
                     </div>
@@ -95,20 +163,40 @@
                     <p>¿Ya tienes una cuenta?
                         <a routerLink="/login" class="fw-bold"> Inicia sesión</a>.
                     </p>
+=======
+                        <label class="form-check-label" for="Check1">Lei los termins y condicciones</label>
+                        <a href="" class="float-end">Terminos y condiciones</a>
+                    </div>
+                    <button type="submit" class="col-12 py-2 btn btn-primary" routerLink="/Login">Confirmar Registro</button>
+                </form>
+                <div class="small mt-5">
+                    <p>¿Ya tienes una cuenta?<a href="" class="fw-bold"> Inicia sesión</a>.</p>
+>>>>>>> Stashed changes
                 </div>
             </div>
         </div>
     </div>
-
+</body>
+<footer>
     <!-- Pie de pagina del sitio -->
     <div class="container fixed-bottom">
         <div class="row">
+<<<<<<< Updated upstream
             <div class="col-md-5 text-center text-muted small m-auto">
                 <p class="">Copyright © 2021 Virtual Wallet. Terminos y Condiciones.</p>
+=======
+            <div class="col-6 text-center m-auto">
+                <p class="float-start">Copyright © 2021 Virtual Wallet All rights reserved.</p>
+                <p class="float-end">Terms & Conditions.</p>
+>>>>>>> Stashed changes
             </div>
         </div>
     </div>
+</footer>
 
+<<<<<<< Updated upstream
 </body>
 
+=======
+>>>>>>> Stashed changes
 </html>

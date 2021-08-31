@@ -20,7 +20,7 @@ const routes: Routes = [
   {path:'registrar-usario', component: RegistrarUsuarioComponent},
   {path:'retirar-dinero', component: RetirarDineroComponent},
   {path:'transferencia', component: TransferenciaComponent},
-  {path:'**', pathMatch: 'full', redirectTo: 'registrar-usario'}
+  {path:'**', pathMatch: 'full', redirectTo: 'pagina-principal'}
 
 ];
 
