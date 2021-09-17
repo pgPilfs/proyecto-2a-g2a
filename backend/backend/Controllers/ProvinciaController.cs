@@ -1,4 +1,5 @@
-﻿using System;
+﻿using backend.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,9 +11,10 @@ namespace backend.Controllers
     public class ProvinciaController : ApiController
     {
         // GET: api/Provincia
-        public IEnumerable<string> Get()
+        public IEnumerable<Provincia> Get()
         {
-            return new string[] { "value1", "value2" };
+            var gProvincia = new GestorProvincia();
+            return gProvincia.ObtenerProvincias();
         }
 
         // GET: api/Provincia/5

@@ -10,21 +10,33 @@ namespace backend.Models
 {
     public class GestorProvincia
     {
-        public void AgregarProvincia(Provincia provincia)
+        //funciona
+        public List<Provincia> ObtenerProvincias()
         {
-            //creo una variable con en la cual guardo el string de la coneccion que esta en web.config
-            string con = ConfigurationManager.ConnectionStrings["stringdb"].ToString();
+            var listaProvincias = new List<Provincia>();
 
-            using (SqlConnection conn = new SqlConnection(con))
+            string stringdb = ConfigurationManager.ConnectionStrings["stringdb"].ToString();
+
+            using (SqlConnection con = new SqlConnection(stringdb))
             {
-                conn.Open();
-                SqlCommand comm = conn.CreateCommand();
-                comm.CommandText = "crear_provincia";
+                con.Open();
+                SqlCommand comm = con.CreateCommand();
+                comm.CommandText = "obtener_Provincias";
                 comm.CommandType = CommandType.StoredProcedure;
-                comm.Parameters.Add(new SqlParameter("@id_provincia", provincia.Id_provincia));
-                comm.Parameters.Add(new SqlParameter("@nombre", provincia.Nombre));
-                comm.ExecuteNonQuery();
+                SqlDataReader dr = comm.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    int id = dr.GetInt32(0);
+                    string nombre = dr.GetString(1).Trim();
+
+                    var provincia = new Provincia(id, nombre);
+                    listaProvincias.Add(provincia);
+                }
+                con.Close();
             }
+
+            return listaProvincias;
         }
     }
 }

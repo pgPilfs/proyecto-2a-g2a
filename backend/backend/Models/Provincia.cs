@@ -16,7 +16,7 @@ namespace backend.Models
 
         }
         //pero ahora si hacemos un contructor para cargar los datos
-        public Provincia(int id_provincia,string nombre)
+        public Provincia(int id_provincia, string nombre)
         {
             this.id_provincia = id_provincia;
             this.nombre = nombre;
@@ -24,5 +24,6 @@ namespace backend.Models
         }
         public int Id_provincia { get => id_provincia; set => id_provincia = value; }
         public string Nombre { get => nombre; set => nombre = value; }
+
     }
 }
