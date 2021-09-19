@@ -25,7 +25,7 @@
                             <label for="nombreUsuario" class="form-label visually-hidden">User</label>
                             <input type="text" formControlName="usuario" placeholder="Usuario" class="form-control" id="InputEmail1" aria-describedby="emailHelp" [class.border-danger]='usuarioInvalid' required>
                             <div *ngIf="usuarioField?.errors && usuarioField?.dirty" class="text-danger ">
-                                <p *ngIf="usuarioField?.hasError('required')">El es necesrio </p>
+                                <p *ngIf="usuarioField?.hasError('required')">El usuario es necesrio </p>
                                 <p *ngIf="usuarioField?.hasError('minlength')">El usuario es incorrecto</p>
                                 <p *ngIf="usuarioField?.hasError('maxlength')">El usuario es incorrecto</p>
                             </div>
@@ -44,11 +44,7 @@
                                 <label class="form-check-label ms-2" for="Check1">Recordarme</label>
                                 <a href="" class="float-end">¿Olvidaste tu contraseña?</a>
                         </div>
-<<<<<<< Updated upstream
-                        <button type="submit" class="col-12 py-2 btn btn-primary" routerLink="/pagina-principal" >Ingresar</button>
-=======
                         <button type="submit" class="col-12 py-2 btn btn-primary" routerLink="/pagina-principal">Login</button>
->>>>>>> Stashed changes
                     </form>
                     <div class="small mt-5"><p>¿No tienes una cuenta?
                         <a routerLink="/registrar-usuario" class="fw-bold"> Registrate</a>.</p></div>

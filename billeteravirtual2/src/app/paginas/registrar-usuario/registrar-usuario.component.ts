@@ -1,25 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< Updated upstream
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-=======
-import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
->>>>>>> Stashed changes
 
 
 @Component({
   selector: 'app-registrar-usuario',
-  templateUrl: './registrar-usuario.component.html',
+  templateUrl:'./registrar-usuario.component.html',
   styleUrls: ['./registrar-usuario.component.css']
 })
 export class RegistrarUsuarioComponent implements OnInit {
 
   form: FormGroup;
 
-<<<<<<< Updated upstream
-  condiciones = "-Minimo 8 caracteres \n -Maximo 15 \n -Al menos una mayuscula\n -Al menos una minuscula \n -Al menos un dijito \n -Al nemos un caracter especial \n -no espacios en blanco "
-=======
   condiciones = "-Minimo 8 caracteres\n -Maximo 15 \n -Al menos una mayuscula\n -Al menos una minuscula \n -Al menos un dijito \n -Al nemos un caracter especial \n -no espacios en blanco "
->>>>>>> Stashed changes
 
   constructor(private formBuilder: FormBuilder) {
 
@@ -29,14 +21,8 @@ export class RegistrarUsuarioComponent implements OnInit {
         nombre: ['', [Validators.required,Validators.minLength(2) ,Validators.maxLength(15)]],
         apellido: ['', [Validators.required, Validators.minLength(2) ,Validators.maxLength(15)]],
         mail: ['', [Validators.required, Validators.email]],
-<<<<<<< Updated upstream
-        contra: ['', [Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/)]],
-        contraRepetida: ['', [Validators.required]]
-        
-=======
         contra: ['', [Validators.required ,Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/)]],
         contraRepetida: ['', [Validators.required]]
->>>>>>> Stashed changes
       }
     )
   }
@@ -84,11 +70,7 @@ export class RegistrarUsuarioComponent implements OnInit {
   get contrasIguales(){
     console.log(this.contraField?.value == this.contraRepetidaField?.value)
     console.log(this.contrasIguales)
-<<<<<<< Updated upstream
-    return this.contraField?.value === this.contraRepetidaField?.value;
-=======
     return this.contraField?.value != this.contraRepetidaField?.value;
->>>>>>> Stashed changes
   }
   onEnviar(event: Event) {
     event.preventDefault();
