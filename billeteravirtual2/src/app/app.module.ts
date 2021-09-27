@@ -34,10 +34,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 
   ],
   providers: [],
