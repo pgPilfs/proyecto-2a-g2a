@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\inetpub\wwwroot\backend_pil</_PublishTargetUrl>
+    <History>False|2021-09-27T20:11:20.7149448Z;False|2021-09-27T17:03:48.1057254-03:00;</History>
+  </PropertyGroup>
+</Project>

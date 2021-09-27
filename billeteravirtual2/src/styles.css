@@ -15,7 +15,10 @@ a {
 }
 .nav-link{
     font-size: 0.9em;
-    color: #38394e;
+    color: #0d6efd!important;
+}
+.nav-link:active {
+    color: blueviolet!important;
 }
 li.nav-item:hover,
 a.col:hover{
