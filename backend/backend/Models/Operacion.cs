@@ -24,8 +24,8 @@ namespace backend.Models
         {
             this.id_operacion = id_operacion;
             this.tipo_operacion = tipo_operacion;
-            this.id_emisor = id_emisor;
-            this.id_destinatario = id_destinatario;
+            this.id_emisor = id_emisor; //CVU
+            this.id_destinatario = id_destinatario; //CVU
             this.monto = monto;
             this.fecha = fecha;
         }
