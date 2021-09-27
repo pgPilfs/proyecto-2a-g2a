@@ -15,7 +15,7 @@ a {
 }
 .nav-link{
     font-size: 0.9em;
-    color: ;
+    color:inherit;
 }
 .nav-link:active {
     color: blueviolet!important;
