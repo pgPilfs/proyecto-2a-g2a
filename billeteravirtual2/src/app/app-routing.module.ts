@@ -17,7 +17,7 @@ const routes: Routes = [
   {path:'ingresar-dinero', component: IngresarDineroComponent},
   {path:'perfil', component: perfilComponent},
   {path:'pagina-principal', component: PaginaPrincipalComponent},
-  {path:'registrar-usario', component: RegistrarUsuarioComponent},
+  {path:'registrar-usuario', component: RegistrarUsuarioComponent},
   {path:'retirar-dinero', component: RetirarDineroComponent},
   {path:'transferencia', component: TransferenciaComponent},
   {path:'**', pathMatch: 'full', redirectTo: 'pagina-principal'}
