@@ -48,7 +48,7 @@ export class RegistrarUsuarioComponent implements OnInit {
   get contraRepetidaField(){
     return this.form.get("contraRepetida")
   }
-
+  
   get usuarioInvalid() {
     return this.usuarioField?.touched && !this.usuarioField.valid;
   }
