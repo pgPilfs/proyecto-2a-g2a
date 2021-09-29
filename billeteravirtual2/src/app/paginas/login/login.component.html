@@ -1,0 +1,65 @@
+<html lang="es">
+
+<head>
+    <title>Login · VirtualWallet</title>
+</head>
+
+<body>     
+    <!-- Cabecera con Logo -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center">
+                <img class="logo mt-5" src="/assets/img/logoVW.png">
+            </div>
+        </div>
+    </div>
+
+    <!-- Cuerpo del sitio / Formulario -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-10 mt-5 m-auto">
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event)" autocomplete="off" novalidate>
+                        <h1 class="h1 fw-bold mb-3">Login</h1>
+                        <p class="">Bienvenidos a<span class="fw-bold"> Virtual Wallet</span></p>
+                        <div class="mb-3">
+                            <label for="nombreUsuario" class="form-label visually-hidden">User</label>
+                            <input type="text" formControlName="usuario" placeholder="Usuario" class="form-control" id="InputEmail1" aria-describedby="emailHelp" [class.border-danger]='usuarioInvalid' required>
+                            <div *ngIf="usuarioField?.errors && usuarioField?.dirty" class="text-danger ">
+                                <p *ngIf="usuarioField?.hasError('required')">El usuario es necesrio </p>
+                                <p *ngIf="usuarioField?.hasError('minlength')">El usuario es incorrecto</p>
+                                <p *ngIf="usuarioField?.hasError('maxlength')">El usuario es incorrecto</p>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="InputPassword1" class="form-label visually-hidden">Contraseña</label>
+                            <input type="password"formControlName="contra" placeholder="Contraseña" class="form-control" id="InputPassword1" [class.border-danger]='contraInvalid' required>
+                            <div *ngIf="contraField?.errors && contraField?.dirty" class="text-danger ">
+                                <p *ngIf="contraField?.hasError('required')">La contraseña es requerida</p>
+                                <p *ngIf="contraField?.hasError('pattern')">La contraseña no es valida</p>
+                                
+                            </div>
+                        </div>
+                        <div class="col-12 small mb-3">
+                                <input type="checkbox" class="form-check-input" id="Check1">
+                                <label class="form-check-label ms-2" for="Check1">Recordarme</label>
+                                <a href="" class="float-end">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <button type="submit" class="col-12 py-2 btn btn-primary" routerLink="/pagina-principal">Login</button>
+                    </form>
+                    <div class="small mt-5"><p>¿No tienes una cuenta?
+                        <a routerLink="/registrar-usuario" class="fw-bold"> Registrate</a>.</p></div>
+            </div>
+        </div>    
+    </div>
+
+    <!-- Pie de pagina del sitio -->
+    <div class="container fixed-bottom">
+        <div class="row">
+            <div class="col-md-5 text-center text-muted small m-auto">
+            <p class="">Copyright © 2021 Virtual Wallet. Terminos y Condiciones.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

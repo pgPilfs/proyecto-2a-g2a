@@ -1,0 +1,108 @@
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="HoracioAlanís">
+    <title>registrar-usuario · VirtualWallet</title>
+</head>
+
+<body>
+    <!-- Cabecera con Logo -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center">
+                <img class="logo mt-5" src="/assets/img/logoVW.png">
+            </div>
+        </div>
+    </div>
+
+    <!-- Cuerpo del sitio/ Formulario -->
+    <div class="container">
+        <div class="row">
+            <div class="col-4 mt-5 m-auto">
+                <form class="needs-validation" [formGroup]="form" (ngSubmit)="onEnviar($event)" autocomplete="off" novalidate>
+                    <h1 class="h1 mb-4">Registrar Usuario</h1>
+                    <p class="">Bienvenidos a<span class="fw-bold"> Virtual Wallet</span></p>
+                    <div class="mb-3">
+                        <label for="nombre">Ingresar Nombre de Usuario:</label>
+                        <input type="text" formControlName="usuario" placeholder="nombre usuario" class="form-control" id="usuario" [class.border-danger]='usuarioInvalid' required>
+                        <div *ngIf="usuarioField?.errors && usuarioField?.dirty" class="text-danger">
+                            <p *ngIf="usuarioField?.hasError('required')">El usuario es requerido</p>
+                            <p *ngIf="usuarioField?.hasError('maxlength')">Superaste la cantidad maxima de caracteres</p>
+                            <p *ngIf="usuarioField?.hasError('minlength')">No ingresaste la cantidad minima de caracteres</p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+
+                        <label for="nombre">Ingresar Nombre:</label>
+                        <input type="text" formControlName="nombre" placeholder="nombre" class="form-control" id="nombre" [class.border-danger]='nombreInvalid' required>
+                        <div *ngIf="nombreField?.errors && nombreField?.dirty" class="text-danger">
+                            <p *ngIf="nombreField?.hasError('required')">El nombre es requerido</p>
+                            <p *ngIf="nombreField?.hasError('maxlength')">Superaste la cantidad maxima de caracteres</p>
+                            <p *ngIf="nombreField?.hasError('minlength')">No ingresaste la cantidad minima de caracteres</p>
+                        </div>
+                        <label for="apellido" class="form-leble">Ingresar Apellido:</label>
+                        <input type="text" formControlName="apellido" placeholder="apellido" class="form-control" id="apellido" [class.border-danger]='apellidoInvalid' required>
+                        <div *ngIf="apellidoField?.errors && apellidoField?.dirty" class="text-danger">
+                            <p *ngIf="apellidoField?.hasError('required')">El apellido es requerido</p>
+                            <p *ngIf="apellidoField?.hasError('maxlength')">Superaste la cantidad maxima de caracteres</p>
+                            <p *ngIf="apellidoField?.hasError('minlength')">No ingresaste la cantidad minima de caracteres</p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mail" class="form-label">Ingresar mail:</label>
+                        <input type="email" class="form-control" formControlName="mail" id="mail" placeholder="nombre@ejemplo.com" required [class.border-danger]='mailInvalid'>
+                        <div *ngIf="mailField?.errors && mailField?.dirty" class="text-danger ">
+                            <p *ngIf="mailField?.hasError('required')">La contraseña es requerida es requerido</p>
+                            <p *ngIf="mailField?.hasError('email')">El Formato del mail no es correcto</p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <p>Ingresar contraseña:</p>
+                        <label for="contra" class="form-label visually-hidden">contraseña1</label>
+                        <input type="password" formControlName="contra" placeholder="contraseña" class="form-control"
+                            id="contra1" [class.border-danger]='contraInvalid'>
+                        <div *ngIf="contraField?.errors && contraField?.dirty" class="text-danger ">
+                            <p *ngIf="contraField?.hasError('required')">El mail es requerido</p>
+                            <p *ngIf="contraField?.hasError('pattern')">El Formato no cumple con las condiccines: {{condiciones}}</p>
+                            
+                        </div>
+                        <br>
+
+                        <label for="contra" class="form-label visually-hidden">contraseña2</label>
+                        <input type="password" formControlName="contraRepetida" placeholder="ingresar contraseña nuevamente" class="form-control"
+                            id="contra2" [class.border-danger]='contraRepetidaInvalid' required>
+                        <div *ngIf="contraRepetidaField?.errors && contraRepetidaField?.dirty" class="text-danger ">
+                            <p *ngIf="contraRepetidaField?.hasError('required')">Repita la contraseña</p>
+                            <p *ngIF='contrasIguales()'>Las contras son distinas</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 small mb-3">
+                        <input type="checkbox" class="form-check-input" id="Check1">
+                        <label class="form-check-label" for="Check1">Lei los termins y condicciones</label>
+                        <a href="" class="float-end">Terminos y condiciones</a>
+                    </div>
+                    <button type="submit" class="col-12 py-2 btn btn-primary" routerLink="/Login">Confirmar Registro</button>
+                </form>
+                <div class="small mt-5">
+                    <p>¿Ya tienes una cuenta?<a href="" class="fw-bold"> Inicia sesión</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <!-- Pie de pagina del sitio -->
+    <div class="container fixed-bottom">
+        <div class="row">
+            <div class="col-6 text-center m-auto">
+                <p class="float-start">Copyright © 2021 Virtual Wallet All rights reserved.</p>
+                <p class="float-end">Terms & Conditions.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>>

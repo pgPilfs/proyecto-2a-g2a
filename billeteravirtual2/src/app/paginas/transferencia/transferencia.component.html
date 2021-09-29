@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <title> Transferencia </title>
+</head>
+
+<!-- Cuerpo de la Página -->
+
+<body class="">
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- Columna Sidebar Izquierda c/ links -->
+      <div class="col-md-2 vh-100">
+        <div class="my-5 ms-3">
+          <img class="logo" src="/assets/img/logoVW_40px.png">
+        </div>
+        <ul class="nav flex-column mb-5">
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/pagina-principal" class="nav-link active">
+              <i class="bi bi-house-door"></i><span class="ms-4">Inicio</span>
+            </a>
+          </li>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/perfil" class="nav-link">
+              <i class="bi bi-person-circle"></i><span class="ms-4">Perfil</span>
+            </a>
+          </li>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/ingresar-dinero" class="nav-link">
+              <i class="bi bi-cash-coin"></i><span class="ms-4">Ingresar Dinero</span>
+            </a>
+          </li>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/retirar-dinero" class="nav-link">
+              <i class="bi bi-cash"></i><span class="ms-4">Retirar Dinero</span>
+            </a>
+          </li>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/consultar-saldo" class="nav-link">
+              <i class="bi bi-piggy-bank"></i><span class="ms-4">Saldo</span>
+            </a>
+          </li>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/transferencia" class="nav-link">
+              <i class="bi bi-arrow-repeat"></i><span class="ms-4">Transferir</span></a>
+          </li>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/consultar-operaciones" class="nav-link">
+              <i class="bi bi-journal-text"></i><span class="ms-4">Movimientos</span></a>
+          </li>
+
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/girar-al-descubierto" class="nav-link disabled" tabindex="-1" aria-disabled="true">
+              <i class="bi bi-arrow-clockwise"></i><span class="ms-4">Girar al Descubierto</span></a>
+          </li>
+        </ul>
+        <ul class="nav flex-column user-menu">
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/perfil" class="nav-link small">
+              <i class="bi bi-gear"></i><span class="ms-4">Configuración</span></a>
+          </li>
+          <li class="nav-item border border-0 rounded-2 ms-2">
+            <a routerLink="/perfil" class="nav-link small">
+              <i class="bi bi-info-circle "></i><span class="ms-4">Info</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna Principal - Main -->
+      <div class="col-md-8 col-sm-12 px-md-5">
+
+        <!-- EDITABLE - Comenzar a editar acá -->
+        <div class="container mt-5 mb-3">
+          <div class="row">
+            <!-- Nombre de la página en la que estás -->
+            <h5 class="h5 mt-1 text-black-50">Transferir</h5>
+          </div>
+          <div class="row">
+            <!-- Nombre de usuario o titulo de sección -->
+            <h1 class="h1">
+              <div class="">
+                <i class="bi bi-person-circle"></i>
+                <span class="ms-3">Usuario</span>
+              </div>
+            </h1>
+          </div>
+        </div>
+
+      <div class="col-sm-12 col-md-12 mt-5 container">
+        <div class="row">
+          <!-- Nombre de usuario o titulo de sección -->
+          <div class="col-md-12 text-center pt-3">
+            <h2 class="h2 fw-bold mb-5"><i class="bi bi-arrow-repeat me-2"></i>Elegí a qué cuenta transferir</h2>
+          </div>
+        </div>
+        </div>
+        <div class="col-sm-12 col-md-6 container">
+        <div class="m-3 row">
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="button">Cuenta Nueva</button>
+
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                data-bs-display="static" aria-expanded="false">
+                Cuentas Propias
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button">Ejemplo cuenta 1</button></li>
+                <li><button class="dropdown-item" type="button">Ejemplo cuenta 2</button></li>
+                <li><button class="dropdown-item" type="button">Ejemplo cuenta 3</button></li>
+              </ul>
+            </div>
+
+            <div class="btn-group ">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Cuentas Guardadas</button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Ejemplo cuenta 1</a></li>
+                <li><a class="dropdown-item" href="#">Ejemplo cuenta 2</a></li>
+                <li><a class="dropdown-item" href="#">Ejemplo cuenta 3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5 row">
+          <div class="col"></div>
+          <div class="mx-4 col">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary">Transferir</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+      <!--FIN DE LO EDITABLE - Comenzar a editar acá-->
+    
+    </div>
+  </div>
+</body>
+</html>
