@@ -5,5 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class OpercionesService {
 
-  constructor() { }
+  constructor(OpercionesService:OpercionesService) 
+  {
+    
+   }
 }

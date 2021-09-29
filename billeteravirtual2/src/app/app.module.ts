@@ -13,7 +13,7 @@ import { RegistrarUsuarioComponent } from './paginas/registrar-usuario/registrar
 import { RetirarDineroComponent } from './paginas/retirar-dinero/retirar-dinero.component';
 import { TransferenciaComponent } from './paginas/transferencia/transferencia.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { OpercionesService } from './services/operciones.service';
 
 @NgModule({
   declarations: [
@@ -34,9 +34,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-
+  
   ],
-  providers: [],
+  providers: [OpercionesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
