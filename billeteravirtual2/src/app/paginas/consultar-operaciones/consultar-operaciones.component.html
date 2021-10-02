@@ -113,7 +113,7 @@
               </thead>
               <tbody>
                 <tr *ngFor="let element of movimientos">
-                  <td> hoy </td> 
+                  <td> [(ngmodel)]="hoy"</td> 
                   <td>{{element.Operacion}}</td>
                   <td>{{element.Numoperacion}}</td>
                   <td>{{element.monto|currency}}</td>

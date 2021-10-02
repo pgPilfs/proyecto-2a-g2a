@@ -5,6 +5,6 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ClientesService {
-
+  url="https://localhost:44393/api/Cliente?DNI={DNI}";
   constructor(private http:HttpClient) { }
 }
