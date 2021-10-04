@@ -6,14 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ClientesService {
-  url="https://localhost:44393/api/Cliente?DNI={DNI}";
-  url2="https://localhost:44332/api/CuentaCuenta?CVU={CVU}";
+  url="https://localhost:44393/api/Cliente";
+  url2="https://localhost:44332/api/Cuenta?CVU={CVU}";
   url3="https://localhost:44332/api/Cliente?cuil=";
   url4="https://localhost:44332/api/Cuenta?documento={documento}&cuil={cuil}&mail={mail}";
   url5="https://localhost:44332/api/Cliente?id_cliente=";
 
   constructor(private http:HttpClient) { }
-  
+
   onCrearRegistro(usuario:Cliente):Observable<any>{
     return this.http.post<Cliente>(this.url, usuario);
   }
