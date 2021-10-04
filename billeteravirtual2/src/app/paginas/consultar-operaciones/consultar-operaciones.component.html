@@ -102,7 +102,7 @@
 
         <div class="mb-3 container">
           <div class="m-1 row">
-            <table class="table">
+            <table *ngIf="mostrar_movimientos">
               <thead>
                 <tr>
                   <th scope="col">Fecha</th>
@@ -112,23 +112,10 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>10/01/2021</td>
-                  <td>Transferencia a otras cuentas</td>
-                  <td>42558664</td>
-                  <td>$10500</td>
-                </tr>
-                <tr>
-                  <td>11/01/2020</td>
-                  <td>Pago de servicios</td>
-                  <td>42224494</td>
-                  <td>$3500</td>
-                </tr>
-                <tr>
-                  <td>15/01/2021</td>
-                  <td>Recibiste</td>
-                  <td>42667664</td>
-                  <td>$900</td>
+                <tr *ngFor="let element of movimientos">
+                  <td>{{element.Operacion}}</td>
+                  <td>{{element.Numoperacion}}</td>
+                  <td>{{element.monto|currency}}</td>
                 </tr>
               </tbody>
             </table>
