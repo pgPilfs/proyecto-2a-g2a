@@ -5,15 +5,17 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace backend.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class CuentaController : ApiController
     {
         // GET: api/Cuenta
         public Cuenta Get(string CVU)
         {
-            var gCuenta = new GestorCuenta();
+            GestorCuenta gCuenta = new GestorCuenta();
             return gCuenta.ObtenerCuenta(CVU);
         }
 
