@@ -10,9 +10,12 @@ export class ConsultarOperacionesComponent implements OnInit {
  
  mostrar_movimientos = true;
  hoy = new Date();
- movimientos=[{Operacion: "Compra", Numoperacion:123, monto:1500}];
+ movimientos;
 
-  constructor(private operacionesService:OpercionesService) {}
+  constructor(private operacionesService:OpercionesService)
+  {
+    this.movimientos=operacionesService.ObtenerUltimosMovimientos
+  }
   
   ngOnInit(): void {
     
