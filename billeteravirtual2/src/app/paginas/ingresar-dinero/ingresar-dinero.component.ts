@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { OpercionesService } from 'src/app/services/operciones.service';
+import { OperacionesService } from 'src/app/services/operaciones.service';
 
 @Component({
   selector: 'app-ingresar-dinero',
@@ -11,12 +11,11 @@ export class IngresarDineroComponent implements OnInit {
 
   DineroIngresado = true
 
-  constructor(OperacinesService:OpercionesService) 
+  constructor(OperacinesService:OperacionesService) 
   {
-
    }
 
   ngOnInit(): void {
   }
-
+  
 }

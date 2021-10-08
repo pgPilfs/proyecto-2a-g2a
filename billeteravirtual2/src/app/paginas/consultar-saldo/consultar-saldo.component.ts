@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OpercionesService } from 'src/app/services/operciones.service';
+import { OperacionesService } from 'src/app/services/operaciones.service';
 
 @Component({
   selector: 'app-consultar-saldo',
@@ -9,7 +9,7 @@ import { OpercionesService } from 'src/app/services/operciones.service';
 export class ConsultarSaldoComponent implements OnInit {
    MostrarMovimientos= true;
    
-  constructor(OperacinesService:OpercionesService)
+  constructor(OperacinesService:OperacionesService)
    {
 
     }

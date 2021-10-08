@@ -9,7 +9,7 @@ using System.Web.Http.Cors;
 
 namespace backend.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
+   [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class OperacionController : ApiController
     {
 

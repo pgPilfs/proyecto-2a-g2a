@@ -13,7 +13,7 @@ import { RegistrarUsuarioComponent } from './paginas/registrar-usuario/registrar
 import { RetirarDineroComponent } from './paginas/retirar-dinero/retirar-dinero.component';
 import { TransferenciaComponent } from './paginas/transferencia/transferencia.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { OpercionesService } from './services/operciones.service';
+import { OperacionesService } from './services/operaciones.service';
 import { CuentasService } from './services/cuentas.service';
 import { ClientesService } from './services/clientes.service';
 import { DireccionesService } from './services/direcciones.service';
@@ -43,7 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [OpercionesService, ClientesService ,CuentasService, DireccionesService, LocalidadesService, OpercionesService, ProvinciasService, TipoOperacionesService],
+  providers: [OperacionesService, ClientesService ,CuentasService, DireccionesService, LocalidadesService, ProvinciasService, TipoOperacionesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

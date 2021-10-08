@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OpercionesService } from 'src/app/services/operciones.service';
+import { OperacionesService } from 'src/app/services/operaciones.service';
 
 @Component({
   selector: 'app-consultar-operaciones',
@@ -10,15 +10,17 @@ export class ConsultarOperacionesComponent implements OnInit {
  
  mostrar_movimientos = true;
  hoy = new Date();
- movimientos;
+ movimientos: any;
 
-  constructor(private operacionesService:OpercionesService)
+  constructor(private operacionesService:OperacionesService)
   {
-    this.movimientos=operacionesService.ObtenerUltimosMovimientos
   }
   
   ngOnInit(): void {
-    
+    this.operacionesService.ObtenerUltimosMovimientos("0340100800100586333009").subscribe(data =>{
+      console.log(data)
+      this.movimientos = data;
+    })
   }
 
 }
