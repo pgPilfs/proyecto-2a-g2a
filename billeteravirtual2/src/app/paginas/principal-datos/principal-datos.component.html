@@ -1,0 +1,65 @@
+<div class="col-md-8 col-sm-12 px-md-5">
+
+    <!-- EDITABLE - Comenzar a editar acá -->
+    <div class="container mt-5 mb-3">
+      <div class="row">
+        <!-- Nombre de la página en la que estás -->
+        <h5 class="h5 mt-1 text-black-50">Inicio</h5>
+      </div>
+      <div class="row">
+        <!-- Nombre de usuario o titulo de sección -->
+        <h1 class="h1">
+          <div class="">
+            <i class="bi bi-person-circle"></i>
+            <span class="ms-3">{{cliente.Nombre}} {{cliente.Apellido}}</span>  
+          </div>
+        </h1>
+      </div>
+    </div>
+    <!-- Columnas - Formularios -->
+    <div class="container mb-3 main">
+      <div class="row">
+        <a routerLink="/consultar-operaciones" class="col text-center border rounded-3 p-3 me-3">
+            <span class="small">Ultimo Movimiento: </span><h3 class="h3 fw-bold">{{operacion.Monto}}</h3>
+        </a>
+        <a routerLink="/consultar-saldo" class="col text-center border rounded-3 p-3 me-3">
+          <span class="small">Saldo Actual: </span><h3 class="h3 fw-bold">{{cuenta.Saldo }}</h3>
+        </a>            
+        <a routerLink="/retirar-dinero" class="col text-center border rounded-3 p-3 me-3">
+          <span class="small">Otras Consultas</span><br>
+          <span class="small">Otras Operaciones</span><br>
+          <span class="small">Retirar Dinero</span>
+        </a>
+        <a routerLink="/ingresar-dinero" class="col text-center border rounded-3 p-3">
+          <button routerLink="/ingresar-dinero" type="link" class="btn btn-primary btn-lg">Ingresar Dinero</button>
+        </a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col mb-3 border rounded-1 me-2" style="min-height: 140px;">
+        <h3 class="h3 m-3">Cuentas Agendadas:</h3> 
+          <p class="ms-4">{{cuenta.cVU}}</p>
+          <p class="ms-4">Cuenta Ejemplo 02</p>
+          <p class="ms-4">Cuenta Ejemplo 03</p>
+        </div>
+        <div class="col mb-3 border rounded-1" style="min-height: 140px;">
+          <h3 class="h3 m-3">Información importante</h3> 
+          <p class="ms-4">¿Cómo retirar dinero?</p>
+          <p class="ms-4">¿Cómo transferir a un amigo?</p>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col mb-3 border rounded-1">
+          <p class="text-center m-0 p-2 small">Copyright © 2021 Virtual Wallet. Terminos y Condiciones.</p>
+        </div>
+      </div>
+    </div>
+    <!--RUTAS HIJAS -->
+    <!--FIN DE LO EDITABLE - Comenzar a editar acá-->
+
+
+  </div>
+

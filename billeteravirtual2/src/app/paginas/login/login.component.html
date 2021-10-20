@@ -18,12 +18,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-10 mt-5 m-auto">
-                <form [formGroup]="form" (ngSubmit)="onEnviar($event)" autocomplete="off" novalidate>
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event,loginCuenta)" autocomplete="off" novalidate>
                         <h1 class="h1 fw-bold mb-3">Login</h1>
                         <p class="">Bienvenidos a<span class="fw-bold"> Virtual Wallet</span></p>
                         <div class="mb-3">
                             <label for="nombreUsuario" class="form-label visually-hidden">User</label>
-                            <input type="text" formControlName="usuario" placeholder="Usuario" class="form-control" id="InputEmail1" aria-describedby="emailHelp" [class.border-danger]='usuarioInvalid' required>
+                            <input type="text" formControlName="usuario" placeholder="Usuario" class="form-control" id="InputEmail1" aria-describedby="emailHelp" [class.border-danger]='usuarioInvalid' required [(ngModel)]="loginCuenta.UserName">
                             <div *ngIf="usuarioField?.errors && usuarioField?.dirty" class="text-danger ">
                                 <p *ngIf="usuarioField?.hasError('required')">El es necesrio </p>
                                 <p *ngIf="usuarioField?.hasError('minlength')">El usuario es incorrecto</p>
@@ -32,10 +32,10 @@
                         </div>
                         <div class="mb-3">
                             <label for="InputPassword1" class="form-label visually-hidden">Contraseña</label>
-                            <input type="password"formControlName="contra" placeholder="Contraseña" class="form-control" id="InputPassword1" [class.border-danger]='contraInvalid' required>
+                            <input type="password" formControlName="contra" placeholder="Contraseña" class="form-control" id="InputPassword1" [class.border-danger]='contraInvalid' [(ngModel)]="loginCuenta.Password" required>
                             <div *ngIf="contraField?.errors && contraField?.dirty" class="text-danger ">
                                 <p *ngIf="contraField?.hasError('required')">La contraseña es requerida</p>
-                                <p *ngIf="contraField?.hasError('pattern')">La contraseña no es valida</p>
+                                <!--<p *ngIf="contraField?.hasError('pattern')">La contraseña no es valida</p>-->
                                 
                             </div>
                         </div>
@@ -45,13 +45,17 @@
                                 <a href="" class="float-end">¿Olvidaste tu contraseña?</a>
                         </div>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                         <button type="submit" class="col-12 py-2 btn btn-primary" routerLink="/pagina-principal" >Ingresar</button>
 =======
                         <button type="submit" class="col-12 py-2 btn btn-primary" routerLink="/pagina-principal">Login</button>
 >>>>>>> Stashed changes
+=======
+                        <button type="submit" class="col-12 py-2 btn btn-primary">Login</button>
+>>>>>>> Stashed changes
                     </form>
                     <div class="small mt-5"><p>¿No tienes una cuenta?
-                        <a routerLink="/registrar-usuario" class="fw-bold"> Registrate</a>.</p></div>
+                        <a routerLink="/registrar-usario" class="fw-bold"> Registrate</a></p></div>
             </div>
         </div>    
     </div>

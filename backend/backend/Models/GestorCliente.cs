@@ -25,7 +25,7 @@ namespace backend.Models
                 comm.Parameters.Add(new SqlParameter("@DNI", DNI));
                 var dr = comm.ExecuteReader();
                 dr.Read();
-                var cliente = new Cliente(dr.GetInt32(0),dr.GetString(1),dr.GetString(2),dr.GetString(3),dr.GetString(4),dr.GetInt32(5));
+                var cliente = new Cliente(dr.GetInt32(0),"nada",dr.GetString(1),dr.GetString(2),dr.GetString(3),dr.GetInt32(4));
                 
                 con.Close();
                 return cliente;

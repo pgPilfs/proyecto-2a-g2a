@@ -83,7 +83,7 @@
             <h1 class="h1">
               <div class="">
                 <i class="bi bi-person-circle"></i>
-                <span class="ms-3">Usuario</span>
+                <span class="ms-3">{{cliente.Nombre }}</span>
               </div>
             </h1>
           </div>
@@ -100,8 +100,8 @@
                 <div class="input-group mb-3">
                   <span class="input-group-text">$</span>
                   <label for="InputNumber" class="form-label visually-hidden">Monto</label>
-                  <input type="number" placeholder="Monto a ingresar" class="form-control" id="InputNumber"
-                    class="form-control" aria-label="Amount (to the nearest dollar)" required>
+                  <input type="number" placeholder="Monto a ingresar" class="form-control" id="InputNumber" [(ngModel)]="cantidad"
+                  [ngModelOptions]="{standalone: true}"class="form-control" aria-label="Amount (to the nearest dollar)" required>
                   <span class="input-group-text">.00</span>
                 </div>
                 <div class="col-12 small mb-3">
@@ -110,7 +110,7 @@
                 </div>
                 <div class="text-end">
                   <button type="submit" class="btn btn-outline-secondary btn-lg">Cancelar</button>
-                  <button type="submit" class="btn btn-success btn-lg ms-3">Confirmar monto</button>
+                  <button type="submit" class="btn btn-success btn-lg ms-3" (click)="RegistrarIngreso()">Confirmar monto</button>
                 </div>
               </form>
             </div>

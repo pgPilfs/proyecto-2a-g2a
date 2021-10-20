@@ -72,6 +72,7 @@
                       <a routerLink="/perfil" class="nav-link small">
                           <i class="bi bi-info-circle "></i><span class="ms-4">Info</span></a>
                   </li>
+                  <button type="button" class="btn btn-danger btn" (click)="Salir()">Salir</button>
               </ul>
           </div>
       <!-- Columna Principal - Main -->
@@ -88,7 +89,7 @@
             <h1 class="h1">
               <div class="">
                 <i class="bi bi-person-circle"></i>
-                <span class="ms-3">Usuario</span>  
+                <span class="ms-3">{{cliente.Nombre}} {{cliente.Apellido}}</span>  
               </div>
             </h1>
           </div>
@@ -97,10 +98,10 @@
         <div class="container mb-3 main">
           <div class="row">
             <a routerLink="/consultar-operaciones" class="col text-center border rounded-3 p-3 me-3">
-                <span class="small">Ultimo Movimiento: </span><h3 class="h3 fw-bold">$10.500</h3>
+                <span class="small">Ultimo Movimiento: </span><h3 class="h3 fw-bold">{{operacion.Monto | currency}} </h3>
             </a>
             <a routerLink="/consultar-saldo" class="col text-center border rounded-3 p-3 me-3">
-              <span class="small">Saldo Actual: </span><h3 class="h3 fw-bold">$50.000</h3>
+              <span class="small">Saldo Actual: </span><h3 class="h3 fw-bold">{{cuenta.Saldo | currency}}</h3>
             </a>            
             <a routerLink="/retirar-dinero" class="col text-center border rounded-3 p-3 me-3">
               <span class="small">Otras Consultas</span><br>
@@ -116,7 +117,7 @@
           <div class="row">
             <div class="col mb-3 border rounded-1 me-2" style="min-height: 140px;">
             <h3 class="h3 m-3">Cuentas Agendadas:</h3> 
-              <p class="ms-4">Cuenta Ejemplo 01</p>
+              <p class="ms-4">{{cuenta.cVU}}</p>
               <p class="ms-4">Cuenta Ejemplo 02</p>
               <p class="ms-4">Cuenta Ejemplo 03</p>
             </div>

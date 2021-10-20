@@ -82,7 +82,7 @@
             <h1 class="h1">
               <div class="">
                 <i class="bi bi-person-circle"></i>
-                <span class="ms-3">Usuario</span>  
+                <span class="ms-3">{{nombre}}</span>  
               </div>
             </h1>
           </div>
@@ -95,14 +95,14 @@
               <div class="text-center">
                 <div class="col-12 mb-3">
                   <div class="display-5">
-                    $50.000
+                    {{this.cuenta["Saldo"] | currency}}
                   </div>
                   <p class="small">pesos argentinos</p>
                 </div>
                 <div class="mt-5 text-end">
-                  <button type="submit" class="btn btn-primary btn-lg ms-3">Ingresar</button>
-                  <button type="submit" class="btn btn-primary btn-lg ms-3">Transferir</button>
-                  <button type="submit" class="btn btn-primary btn-lg ms-3">Retirar</button>
+                  <button type="submit" routerLink="/ingresar-dinero" class="btn btn-primary btn-lg ms-3">Ingresar</button>
+                  <button type="submit" routerLink="/transferencia" class="btn btn-primary btn-lg ms-3">Transferir</button>
+                  <button type="submit" routerLink="/retirar-dinero" class="btn btn-primary btn-lg ms-3">Retirar</button>
                </div>
               </div>
                      

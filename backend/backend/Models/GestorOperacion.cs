@@ -76,7 +76,15 @@ namespace backend.Models
                 {
                     comm.Parameters.Add(new SqlParameter("@id_emisor", operacion.Id_emisor));
                 }
-                comm.Parameters.Add(new SqlParameter("@id_destinatario", operacion.Id_destinatario));
+                if (operacion.Tipo_operacion !=4 )
+                {
+                    comm.Parameters.Add(new SqlParameter("@id_destinatario", operacion.Id_destinatario));
+                }
+                else
+                {
+                    comm.Parameters.Add(new SqlParameter("@id_destinatario", "null"));
+                }
+                
                 comm.Parameters.Add(new SqlParameter("@monto", operacion.Monto));
                 comm.Parameters.Add(new SqlParameter("@fecha", operacion.Fecha));
                 //ejecuto la query
@@ -98,35 +106,34 @@ namespace backend.Models
                 //limpio los parametros 
                 comm.Parameters.Clear();
 
-                comm.CommandText = "crear_operacion";
-                comm.CommandType = CommandType.StoredProcedure;
-
-                comm.Parameters.Add(new SqlParameter("@tipo_operacion", 1));
-                comm.Parameters.Add(new SqlParameter("@id_emisor", operacion.Id_emisor));
-                if(operacion.Tipo_operacion == 4)
+                if (operacion.Tipo_operacion != 4 && operacion.Tipo_operacion != 3)
                 {
-                    comm.Parameters.Add(new SqlParameter("@id_destinatario", "null"));
-                }
-                else
-                {
-                    comm.Parameters.Add(new SqlParameter("@id_destinatario", operacion.Id_destinatario));
-                }
-                comm.Parameters.Add(new SqlParameter("@monto", operacion.Monto));
-                comm.Parameters.Add(new SqlParameter("@fecha", fecha));
-
-                comm.ExecuteNonQuery();
-
-                comm.Parameters.Clear();
-                //cargo el sando de la cuenta receptora
-                if(operacion.Tipo_operacion != 4)
-                {
-                    comm.CommandText = "modifcar_saldo";
+                    //registro el ingreso del dinero en la cuenta del destinatario 
+                    comm.CommandText = "crear_operacion";
                     comm.CommandType = CommandType.StoredProcedure;
-                    comm.Parameters.Add(new SqlParameter("@CVU",operacion.Id_destinatario));
-                    comm.Parameters.Add(new SqlParameter("@monto",operacion.Monto));
+
+                    comm.Parameters.Add(new SqlParameter("@tipo_operacion", 1));
+                    comm.Parameters.Add(new SqlParameter("@id_emisor", operacion.Id_emisor));
+                    comm.Parameters.Add(new SqlParameter("@id_destinatario", operacion.Id_destinatario));
+
+                    comm.Parameters.Add(new SqlParameter("@monto", operacion.Monto));
+                    comm.Parameters.Add(new SqlParameter("@fecha", fecha));
 
                     comm.ExecuteNonQuery();
                 }
+                if(operacion.Tipo_operacion != 4)
+                {
+                    //cargo el sando de la cuenta receptora
+                    comm.CommandText = "modifcar_saldo";
+                    comm.CommandType = CommandType.StoredProcedure;
+                    comm.Parameters.Clear();
+                    comm.Parameters.Add(new SqlParameter("@CVU", operacion.Id_destinatario));
+                    comm.Parameters.Add(new SqlParameter("@monto", operacion.Monto));
+
+                    comm.ExecuteNonQuery();
+                }
+                    
+                
 
                 //hago efectiva la transaccion 
                 objTransaction.Commit();

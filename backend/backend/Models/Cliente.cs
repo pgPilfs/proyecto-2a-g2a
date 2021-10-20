@@ -44,7 +44,6 @@ namespace backend.Models
             this.id_direccion = id_direccion;
         }
 
-
         public int dNI { get => DNI; set => DNI = value; }
         public string Contra { get => contra; set => contra = value; }
         public string Mail { get => mail; set => mail = value; }

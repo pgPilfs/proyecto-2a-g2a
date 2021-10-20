@@ -44,7 +44,7 @@ namespace backend.Models
             }
         }
         //funciona
-        public Cuenta ObtenerCuenta(string CVU)
+        public Cuenta ObtenerCuenta(int id_cliente)
         {
             string stringdb = ConfigurationManager.ConnectionStrings["stringdb"].ToString();
 
@@ -57,7 +57,7 @@ namespace backend.Models
                 SqlCommand comm = con.CreateCommand();
                 comm.CommandText = "obtener_cuenta";
                 comm.CommandType = CommandType.StoredProcedure;
-                comm.Parameters.Add(new SqlParameter("@CVU", CVU));
+                comm.Parameters.Add(new SqlParameter("@id_cliente", id_cliente));
                 var dr = comm.ExecuteReader();
                 if (dr.Read())
                 {
@@ -103,6 +103,42 @@ namespace backend.Models
                 var dr = comm.ExecuteNonQuery();
                 con.Close();
             }
+        }
+        public LoginRequest ObtenerLoginCuenta(string Username , string Password)
+        {
+            string stringdb = ConfigurationManager.ConnectionStrings["stringdb"].ToString();
+
+            using (var con = new SqlConnection(stringdb))
+            {
+
+                var loginRequest = new LoginRequest();
+                //Abro la conexion 
+                con.Open();
+                SqlCommand comm = con.CreateCommand();
+                comm.CommandText = "obtener_loginCuenta";
+                comm.CommandType = CommandType.StoredProcedure;
+                comm.Parameters.Add(new SqlParameter("@username", Username));
+                comm.Parameters.Add(new SqlParameter("@password", Password));
+                var dr = comm.ExecuteReader();
+                if (dr.Read())
+                {   
+
+                    loginRequest.Username = dr.GetString(0).Trim();
+                    loginRequest.Password = dr.GetString(1).Trim();
+                    loginRequest.Id_cliente = dr.GetInt32(2);
+                    loginRequest.CVU = dr.GetString(3).Trim();
+
+
+
+                    con.Close();
+                    return loginRequest;
+                }
+
+                return loginRequest;
+
+            }
+
+
         }
     }
 }

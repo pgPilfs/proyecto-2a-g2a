@@ -112,6 +112,7 @@
                 </tr>
               </thead>
               <tbody>
+<<<<<<< Updated upstream
                 <tr>
                   <td>10/01/2021</td>
                   <td>Transferencia a otras cuentas</td>
@@ -129,6 +130,21 @@
                   <td>Recibiste</td>
                   <td>42667664</td>
                   <td>$900</td>
+=======
+                <tr *ngFor="let element of movimientos">
+                  <td>{{element.Fecha| date: 'dd/MM/yyyy hh:mm' : "GMT-3"}}</td>
+                  <td>{{element.Id_operacion }}</td>
+                  <td [ngSwitch]="element.Tipo_operacion">
+                    <tr *ngSwitchCase="0"> Envio</tr>
+                    <tr *ngSwitchCase="1"> Recibo</tr>
+                    <tr *ngSwitchCase="2"> Prestamo</tr>
+                    <tr *ngSwitchCase="3"> Cargo</tr>
+                    <tr *ngSwitchCase="4"> Retiro</tr>
+                  </td>
+                  <td>{{element.Id_emisor}}</td>
+                  <td>{{element.Id_destinatario}}</td>
+                  <td>{{element.Monto | currency}}</td>
+>>>>>>> Stashed changes
                 </tr>
               </tbody>
             </table>
