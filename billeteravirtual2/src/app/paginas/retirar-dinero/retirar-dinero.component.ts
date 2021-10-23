@@ -1,25 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< Updated upstream
+import { Operacion, OperacionesService } from 'src/app/services/operaciones.service';
 
-=======
-import { OperacionesService , Operacion} from 'src/app/services/operaciones.service';
-const NOMBRE = 'auth-nombre';
+const ID_CLIENTE = 'auth-id';
 const CVU = 'auth-cvu';
->>>>>>> Stashed changes
+const NOMBRE = 'auth-nombre';
 @Component({
   selector: 'app-retirar-dinero',
   templateUrl: './retirar-dinero.component.html',
   styleUrls: ['./retirar-dinero.component.css']
 })
 export class RetirarDineroComponent implements OnInit {
-<<<<<<< Updated upstream
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-=======
 cantidad:any;
 nombre = String(localStorage.getItem(NOMBRE))
 hoy = new Date();
@@ -39,5 +29,4 @@ cvu= String(localStorage.getItem(CVU));
     console.log(this.cantidad)
     alert("Transferencia realizada")
   }
->>>>>>> Stashed changes
 }

@@ -13,13 +13,9 @@ namespace backend.Controllers
         // GET: api/Cuenta
         public Cuenta Get(int id_cliente)
         {
-<<<<<<< Updated upstream
-            var gCuenta = new GestorCuenta();
-            return gCuenta.ObtenerCuenta(CVU);
-=======
+
             GestorCuenta gCuenta = new GestorCuenta();
             return gCuenta.ObtenerCuenta(id_cliente);
->>>>>>> Stashed changes
         }
 
         // POST: api/Cuenta

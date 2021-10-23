@@ -132,9 +132,7 @@ namespace backend.Models
 
                     comm.ExecuteNonQuery();
                 }
-                    
                 
-
                 //hago efectiva la transaccion 
                 objTransaction.Commit();
                 //cierro la conexion 
